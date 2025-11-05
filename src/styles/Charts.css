@@ -1,0 +1,38 @@
+.info{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.statistics-title{
+    text-align: center;
+}
+
+.category-container{
+    text-align: center;
+}
+
+.categories-list{
+    margin: 0.3rem 0rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.3rem 0.5rem;
+}
+
+.charts-container{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 90vw;
+}
+
+.charts-container > div{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
