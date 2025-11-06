@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/survey_visualizer_integration/static/css/main.2601907c.css",
+    "main.js": "/survey_visualizer_integration/static/js/main.c200da6d.js",
+    "static/js/453.17ea600d.chunk.js": "/survey_visualizer_integration/static/js/453.17ea600d.chunk.js",
+    "static/media/Kotlin_Vehicle.png": "/survey_visualizer_integration/static/media/Kotlin_Vehicle.a845c3d1a9a379661fb3.png",
+    "static/media/JB_ScienceNature.png": "/survey_visualizer_integration/static/media/JB_ScienceNature.b6a3f3a01231fc2ebe86.png",
+    "static/media/JB_Vehicle.png": "/survey_visualizer_integration/static/media/JB_Vehicle.f9119eba745475cd1ea5.png",
+    "static/media/Kotlin_VideoGames.png": "/survey_visualizer_integration/static/media/Kotlin_VideoGames.2811511eff56b21a8143.png",
+    "static/media/JB_VideoGames.png": "/survey_visualizer_integration/static/media/JB_VideoGames.69ca220c87c445b4ba67.png",
+    "static/media/JB_History.png": "/survey_visualizer_integration/static/media/JB_History.8e577131aeff88897dfe.png",
+    "static/media/Kotlin_Sports.png": "/survey_visualizer_integration/static/media/Kotlin_Sports.65ca6baae4b4d8626afe.png",
+    "static/media/Kotlin_ScienceNature.png": "/survey_visualizer_integration/static/media/Kotlin_ScienceNature.99eae87733f799961894.png",
+    "static/media/Kotlin_GeneralKnowledge.png": "/survey_visualizer_integration/static/media/Kotlin_GeneralKnowledge.eeba72e196ba7c8ddc06.png",
+    "static/media/JB_GeneralKnowledge.png": "/survey_visualizer_integration/static/media/JB_GeneralKnowledge.c2654708a44da5300566.png",
+    "static/media/Kotlin_History.png": "/survey_visualizer_integration/static/media/Kotlin_History.276adee885dae9ddf2b8.png",
+    "static/media/JB_Sports.png": "/survey_visualizer_integration/static/media/JB_Sports.cb18091f8c73593408db.png",
+    "static/media/JB_Default.png": "/survey_visualizer_integration/static/media/JB_Default.4bd5d216805287803a48.png",
+    "static/media/Kotlin_Default.png": "/survey_visualizer_integration/static/media/Kotlin_Default.57073281856d91194b14.png",
+    "index.html": "/survey_visualizer_integration/index.html",
+    "main.2601907c.css.map": "/survey_visualizer_integration/static/css/main.2601907c.css.map",
+    "main.c200da6d.js.map": "/survey_visualizer_integration/static/js/main.c200da6d.js.map",
+    "453.17ea600d.chunk.js.map": "/survey_visualizer_integration/static/js/453.17ea600d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2601907c.css",
+    "static/js/main.c200da6d.js"
+  ]
+}
