@@ -41,7 +41,7 @@ function QuestionTable({questions} : QuestionTableProps){
     };
 
     const sortedQuestions: questionType[] = useMemo(() => {
-        if ( !activeFilter ) return questions
+        if ( !activeFilter || activeFilter === "id" ) return questions
             
         const key = activeFilter as keyof questionType
 
@@ -67,13 +67,12 @@ function QuestionTable({questions} : QuestionTableProps){
         }
 
         let tempQuestCat = activeQuestion.category;
-        console.log(tempQuestCat)
+
         if ( tempQuestCat.includes("Entertainment") ){
             tempQuestCat = tempQuestCat.slice(15)
         }
 
         tempQuestCat = tempQuestCat.replaceAll(" ", "").replaceAll("&", "")
-        console.log(tempQuestCat)
 
         return tempQuestCat
     }
@@ -124,7 +123,7 @@ function QuestionTable({questions} : QuestionTableProps){
                                         <div 
                                             className="active-row"
                                             key={el.id}
-                                            
+                                            onClick={() => setActiveQuestion(null)}
                                         >
                                             <div className="active-title">
                                                 <span>{`${el.id}.`}</span>

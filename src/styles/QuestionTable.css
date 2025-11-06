@@ -7,11 +7,11 @@
 
 .table-container{
   margin: 0 1rem;
+  width: 60vw;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  width: 60vw;
 }
 
 .table-header {
@@ -21,7 +21,7 @@
   justify-content: flex-end;
   background-color: #333333;
   color: #d7d7d7;
-  border-bottom: 1px solid #ccc;
+  border: 1px solid #ccc;
   padding: 0.5rem 1rem;
   border-radius: 8px 8px 0 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -60,7 +60,7 @@
   width: 100%;
   /* background-color: #f7f7f7; */
   background-color: #1d1d1d;
-  border-bottom: 1px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 0 0 8px 8px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   display: grid;
@@ -81,8 +81,21 @@
   transition: background-color 0.2s;
 }
 
+.row span {
+  height: 100%;
+  padding: 0 0.25rem;
+  place-content: center start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .row:hover {
   background-color: #eaeaea;
+}
+
+.row:hover span{
+  color: black;
 }
 
 .active-row{
@@ -135,15 +148,6 @@
 
 .active-row .qst-ans span:hover{
   transform: scale(1.05);
-}
-
-.row span {
-  height: 100%;
-  padding: 0 0.25rem;
-  place-content: center start;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .pages-list {

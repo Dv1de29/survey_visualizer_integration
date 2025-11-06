@@ -33,8 +33,17 @@ main{
 
 footer{
     width: 100%;
-    height: 5vh;
+    height: 10vh;
     max-height: 50px;
-    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a344aa;
     align-self: flex-end;
+    gap: 1rem;
+}
+
+footer{
+    color: #f3f3f3;
+    font-size: 1.5rem;
 }

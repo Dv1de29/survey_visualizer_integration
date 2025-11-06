@@ -15,7 +15,8 @@ function App() {
             <Questions/>
           </main>
           <footer>
-
+            <span>Barbu David-Florian</span>
+            <span>JetBrains Survey Visualizer Integration Task</span>
           </footer>
         </div>
       </div>
