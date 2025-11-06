@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/survey_visualizer_integration/static/css/main.2601907c.css",
+    "main.css": "/survey_visualizer_integration/static/css/main.920fc7f0.css",
     "main.js": "/survey_visualizer_integration/static/js/main.c200da6d.js",
     "static/js/453.17ea600d.chunk.js": "/survey_visualizer_integration/static/js/453.17ea600d.chunk.js",
     "static/media/Kotlin_Vehicle.png": "/survey_visualizer_integration/static/media/Kotlin_Vehicle.a845c3d1a9a379661fb3.png",
@@ -18,12 +18,12 @@
     "static/media/JB_Default.png": "/survey_visualizer_integration/static/media/JB_Default.4bd5d216805287803a48.png",
     "static/media/Kotlin_Default.png": "/survey_visualizer_integration/static/media/Kotlin_Default.57073281856d91194b14.png",
     "index.html": "/survey_visualizer_integration/index.html",
-    "main.2601907c.css.map": "/survey_visualizer_integration/static/css/main.2601907c.css.map",
+    "main.920fc7f0.css.map": "/survey_visualizer_integration/static/css/main.920fc7f0.css.map",
     "main.c200da6d.js.map": "/survey_visualizer_integration/static/js/main.c200da6d.js.map",
     "453.17ea600d.chunk.js.map": "/survey_visualizer_integration/static/js/453.17ea600d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2601907c.css",
+    "static/css/main.920fc7f0.css",
     "static/js/main.c200da6d.js"
   ]
 }
