@@ -21,7 +21,7 @@ export const images: Record<string, string> = {
   Kotlin_History: KotlinHistory,
   Kotlin_ScienceNature: KotScience,
   Kotlin_Sports: KotlinSports,
-  Kotlin_Vehicle: KotlinVehicle,
+  Kotlin_Vehicles: KotlinVehicle,
   Kotlin_VideoGames: KotlinGames,
 
   JB_Default: JBDefault,
@@ -30,6 +30,6 @@ export const images: Record<string, string> = {
   JB_ScienceNature: JBScience,
   JB_History: JBHistory,
   JB_GeneralKnowledge: JBGK,
-  JB_Vehicle: JBVehicle,
+  JB_Vehicles: JBVehicle,
 };
 
