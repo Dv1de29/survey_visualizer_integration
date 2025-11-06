@@ -9,7 +9,7 @@ function App() {
       <div className="app">
         <div className="app-container">
           <header>
-
+            <span>Survey Visualizer Integration</span>
           </header>
           <main>
             <Questions/>

@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react"
 
 import ImageInteractive from "./ImageInteractive";
+import MultipleAnswers from "./MultipleAnswer";
 
 import '../styles/QuestionTable.css'
 
@@ -105,17 +106,40 @@ function QuestionTable({questions} : QuestionTableProps){
                         </div>
                         {sortedQuestions.slice((activePage - 1) * maxQstPage, activePage * maxQstPage).map((el, i) => {
                             return(
-                                <div 
-                                    className={`row ${activeQuestion?.id === el.id ? "active" : ""}`} 
-                                    key={el.id}
-                                    onClick={() => {setActiveQuestion(el); console.log(activeQuestion?.category)}}
-                                >
-                                    <span>{el.id}</span>
-                                    <span>{el.category.slice((el.category.includes("Entertainment") === true) ? 15 : 0)}</span>
-                                    <span>{el.questionText}</span>
-                                    <span>{el.difficulty}</span>
-                                    <span>{el.type}</span>
-                                </div>
+                                <>
+                                    {el !== activeQuestion && (
+                                        <div 
+                                            className="row" 
+                                            key={el.id}
+                                            onClick={() => setActiveQuestion(el)}
+                                        >
+                                            <span>{el.id}</span>
+                                            <span>{el.category.slice((el.category.includes("Entertainment") === true) ? 15 : 0)}</span>
+                                            <span>{el.questionText}</span>
+                                            <span>{el.difficulty}</span>
+                                            <span>{el.type}</span>
+                                        </div>
+                                    )}
+                                    {el === activeQuestion && (
+                                        <div 
+                                            className="active-row"
+                                            key={el.id}
+                                            
+                                        >
+                                            <div className="active-title">
+                                                <span>{`${el.id}.`}</span>
+                                                <span>{`Category: ${el.category}`}</span>
+                                                <span>{`Question type: ${el.type}`}</span>
+                                            </div>
+                                            <div className="qst-texts">
+                                                <span className="qst-tx">{el.questionText}</span>
+                                                <div className="qst-ans">
+                                                    <MultipleAnswers qst={el}/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </>
                             )
                         })}
                     </div>

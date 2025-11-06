@@ -5,13 +5,6 @@
   width: 100%;
 }
 
-.img-logo{
-  width: 8rem;
-  height: 8rem;
-  object-fit: contain;
-  display: block;
-}
-
 .table-container{
   margin: 0 1rem;
   display: flex;
@@ -71,9 +64,10 @@
   border-radius: 0 0 8px 8px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   display: grid;
-  grid-auto-rows: minmax(3.5vh, 5vh);
+  grid-auto-rows: minmax(5vh, auto);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
+  color: #f3f3f3;
 }
 
 .row {
@@ -87,16 +81,60 @@
   transition: background-color 0.2s;
 }
 
-.questions-list .active{
-  background-color: green;
-}
-
-/* .row > *{
-  border: 1px solid #333;
-} */
-
 .row:hover {
   background-color: #eaeaea;
+}
+
+.active-row{
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-flow: column;
+  min-height: 10vh;
+  height: auto;
+  background-color: #515151;
+}
+
+.active-row .active-title{
+  height: auto;
+  width: 100%
+}
+
+.active-row .active-title > span{
+  font-weight: bold;
+}
+
+.active-row .active-title{
+  padding: 0rem 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.active-row .qst-texts{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.active-row .qst-tx{
+  width: 75%;
+}
+
+.active-row .qst-ans{
+  width: 25%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.active-row .qst-ans span{
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.active-row .qst-ans span:hover{
+  transform: scale(1.05);
 }
 
 .row span {
