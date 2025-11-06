@@ -12,6 +12,9 @@ let nextId = 1
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
+
+
+///// this is the fethcing part where we parse the data into json and put it into the questiontype[] vector with decoding the encode=url13986
 const getData = async (token: string): Promise<questionType[]> => {
     const QuestionNumber = 50;
 
@@ -48,6 +51,8 @@ const getData = async (token: string): Promise<questionType[]> => {
     return questions
 }
 
+
+// This is the fetching main part with retrying in case of error or when we need to wait the 5s span in which we can only call one api request
 const fetchRetry = async (): Promise<questionType[]> => {
     let attempts = 0
     const maxAttempts = 3
@@ -66,13 +71,6 @@ const fetchRetry = async (): Promise<questionType[]> => {
                 await sleep(5000)
                 attempts++
             }
-            // else if ( e.message.includes("Token invalid") || e.message.includes("API returned error code: 3") || e.message.includes("API returned error code: 4")) {
-            //     console.warn("Token expired/corrupted; Fetching new token");
-            //     responseToken = await fetch("https://opentdb.com/api_token.php?command=request")
-            //     resToken = await responseToken.json()
-            //     token = resToken.token
-            //     attempts++;
-            // }
             else{
                 throw e
             }
@@ -101,10 +99,6 @@ function Questions(){
 
 
             try{
-                // const responseToken = await fetch("https://opentdb.com/api_token.php?command=request")
-                // const resToken = await responseToken.json()
-                // const token = resToken.token
-
                 const qst1 = await fetchRetry()
                 setQuestions(qst1)
                 setLoading(false)
@@ -143,6 +137,7 @@ function Questions(){
                     />
                 </>
                 )}
+                {/* This is the loading/error handling on the UI */}
                 {loading && (
                     <div className="loading-container">
                         <div className="spinner"></div>

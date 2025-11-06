@@ -1,3 +1,4 @@
+// This is the question type that is used in the app
 export interface questionType{
     id: number,
     type: string,

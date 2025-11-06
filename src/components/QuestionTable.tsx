@@ -11,8 +11,11 @@ interface QuestionTableProps{
     questions: questionType[],
 }
 
-
+//// This component is the main table of questions responsible for their showing and interactivity
 function QuestionTable({questions} : QuestionTableProps){
+
+
+    //// This can be improved with a useReducer with growing of the database and improvement on the API's conditions
     const [ activeQuestion, setActiveQuestion] = useState<questionType | null>(null);
     const [ activeFilter, setActiveFilter] = useState<string | null>(null);
     const [ activePage, setActivePage ] = useState<number>(1);
@@ -23,6 +26,7 @@ function QuestionTable({questions} : QuestionTableProps){
         return Math.ceil(questions.length / maxQstPage)
     }, [questions, maxQstPage])
 
+    //// This returns the page numbers preset
     const getPageNumbers = () => {
 
         if (totalPages <= 5) {
@@ -40,6 +44,7 @@ function QuestionTable({questions} : QuestionTableProps){
         return [activePage - 1, activePage, activePage + 1];
     };
 
+    //// This filters the questions list that is used in the return
     const sortedQuestions: questionType[] = useMemo(() => {
         if ( !activeFilter || activeFilter === "id" ) return questions
             
@@ -80,6 +85,7 @@ function QuestionTable({questions} : QuestionTableProps){
     return (
         <>
             <div className="question-container">
+                {/* The ImageInteractive components returns an image with a Kotlin (here at the begining) and a JetBrains (at the end) logo that is customised based on the active question category that is pressed. Keep in mind that I didn't created customized logos for all categories, just for some (VideoGaes, GeneralKnwoledge, History, etc.) */}
                 <ImageInteractive logo="Kotlin" category={getImageCategory()}/>
                 <div className="table-container">
                     <div className="table-header">
@@ -103,6 +109,7 @@ function QuestionTable({questions} : QuestionTableProps){
                             <span>{"Difficulty:"}</span>
                             <span>{"Type:"}</span>
                         </div>
+                        {/* Here we generate only the maxQstPage questions based on what page we are on */}
                         {sortedQuestions.slice((activePage - 1) * maxQstPage, activePage * maxQstPage).map((el, i) => {
                             return(
                                 <>
@@ -143,6 +150,7 @@ function QuestionTable({questions} : QuestionTableProps){
                         })}
                     </div>
 
+                    {/* This is the page number container that is responsible for showing questions based on a constant number and iterate through all with the pages */}
                     <div className="pages-list"
                         style={{
                             gridTemplateColumns:
@@ -189,6 +197,7 @@ function QuestionTable({questions} : QuestionTableProps){
                     </div>
                 
                 </div>
+                {/* This is the customized JetBrains logo that is mentioned above */}
                 <ImageInteractive logo="JB" category={getImageCategory()}/>
             </div>
         </>

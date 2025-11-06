@@ -8,7 +8,10 @@ interface MultipleAnswersProps{
     qst: questionType,
 }
 
+//// This components gives the question answers based on its category
+
 function MultipleAnswers({qst} : MultipleAnswersProps){
+    ///// The useState is meant for showing on selection the true answer with the color green and if the user pressed the wrong answer with the color red
     const [ selected, setSelected ] = useState<string | null>(null);
 
     let ans = []

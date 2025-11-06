@@ -9,8 +9,11 @@ interface ChartsProps{
     questions: questionType[],
 }
 
+
+//// this component is responsible for the built of the charts based on the questions props that is passed
 function Charts({questions}: ChartsProps){
 
+    ///// categoryMap/Data is used for building the data that will be passed to the chart
     const categoryMap: Record<string, number> = {};
     const difficultyMap: Record<string, number> = {};
 
@@ -41,6 +44,7 @@ function Charts({questions}: ChartsProps){
         <>
             <div className="info">
                 <h2 className="statistics-title">📊 Question Statistics</h2>
+                {/* This shows the list of all categories and their question count */}
                 <div className="category-container">
                     <h3>Categories</h3>
                     <div className="categories-list">
@@ -55,6 +59,7 @@ function Charts({questions}: ChartsProps){
                     </div>
                 </div>
 
+                {/* This is where the charts are made based on the questions category/difficulty */}
                 <div className="charts-container">
                     <div className="barchart">
                         <h3>Questions by Category</h3>
