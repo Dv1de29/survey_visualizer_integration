@@ -55,7 +55,7 @@ function Charts({questions}: ChartsProps){
                 <div className="charts-container">
                     <div className="barchart">
                         <h3>Questions by Category</h3>
-                        <BarChart width={600} height={300} data={categoryData}>
+                        <BarChart className="barchart-el" data={categoryData}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="category" interval={0} angle={90} textAnchor="start" height={150} tick={{ fill: "#000" }} />
                         <YAxis tick={{ fill: "#000" }}/>

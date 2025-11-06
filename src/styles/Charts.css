@@ -22,8 +22,8 @@
 }
 
 .categories-list span{
+    place-content: center;
     font-size: 1.2rem;
-    
 }
 
 .charts-container{
@@ -44,4 +44,24 @@
 
 .text-chart{
     color: black;
+}
+
+.barchart-el{
+    width: 600px;
+    height: 400px;
+}
+
+@media (max-width: 1025px) {
+    .charts-container{
+        flex-flow: column;
+    }
+
+    .barchart-el{
+        width: 80vw;
+        height: auto;
+    }
+
+    .categories-list span{
+        font-size: 8px;
+    }
 }

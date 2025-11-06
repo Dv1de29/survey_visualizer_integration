@@ -20,15 +20,17 @@ header{
 
 header span{
     color: #f3f3f3;
-    font-size: 2rem;
+    font-size: 20px;
 }
 
 main{
     padding: 1rem 0.5rem;
+    min-width: 100vw;
+    width: auto;
     height: auto;
     min-height: 85vh;
     background: linear-gradient(90deg, #003f5b, #2b4b7d, #5f5195, #98509d, #cc4c91, #f25375, #ff6f4e, #ff9913);
-    
+    overflow-x: hidden;
 }
 
 footer{
@@ -45,5 +47,11 @@ footer{
 
 footer{
     color: #f3f3f3;
-    font-size: 1.5rem;
+    font-size: 15px;
+}
+
+@media (max-width: 600px){
+    footer{
+        font-size: 8px;
+    }
 }
