@@ -9,7 +9,7 @@ interface MultipleAnswersProps{
 }
 
 function MultipleAnswers({qst} : MultipleAnswersProps){
-    const [ selected, setSelected ] = useState<string | null>(null)
+    const [ selected, setSelected ] = useState<string | null>(null);
 
     let ans = []
 
@@ -42,7 +42,7 @@ function MultipleAnswers({qst} : MultipleAnswersProps){
         ))
         ans.push((
             <span 
-                id={`${selected === "false" ? `${qst.correct_answer === "True" ? "wrong" : "correct"}` : `${qst.correct_answer === "False" ? "correct" : ""}`}`}
+                id={selected ? `${selected === "false" ? `${qst.correct_answer === "True" ? "wrong" : "correct"}` : `${qst.correct_answer === "False" ? "correct" : ""}`}` : ""}
                 onClick={(e) => {setSelected("false"); e.stopPropagation()}}
             >False</span>
         ))
