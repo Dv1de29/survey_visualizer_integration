@@ -1,4 +1,4 @@
-import { Bar, BarChart, CartesianGrid, Cell, Legend, Pie, PieChart, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 import '../styles/Charts.css'
 
@@ -16,7 +16,7 @@ function Charts({questions}: ChartsProps){
 
     questions.forEach((qst) => {
         if ( qst.category.includes("Entertainments")){
-            categoryMap[qst.category.slice(16)] = (categoryMap[qst.category] || 0) + 1;
+            categoryMap[qst.category.slice(15)] = (categoryMap[qst.category] || 0) + 1;
         }
         categoryMap[qst.category.slice(qst.category.includes("Entertainment") === true ? 15 : 0)] = (categoryMap[qst.category] || 0) + 1;
         difficultyMap[qst.difficulty] = (difficultyMap[qst.difficulty] || 0) + 1;
@@ -26,6 +26,9 @@ function Charts({questions}: ChartsProps){
         category,
         count,
     }))
+
+    console.log(categoryData)
+
     const difficultyData = Object.entries(difficultyMap).map(([difficulty, count]) => ({
         difficulty,
         count
@@ -55,13 +58,15 @@ function Charts({questions}: ChartsProps){
                 <div className="charts-container">
                     <div className="barchart">
                         <h3>Questions by Category</h3>
-                        <BarChart className="barchart-el" data={categoryData}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="category" interval={0} angle={90} textAnchor="start" height={150} tick={{ fill: "#000" }} />
-                        <YAxis tick={{ fill: "#000" }}/>
-                        <Tooltip />
-                        <Bar dataKey="count" fill="#8884d8" />
-                        </BarChart>
+                        <ResponsiveContainer width={`100%`} height={400}>
+                            <BarChart  className="barchart-el" data={categoryData}>
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="category" interval={0} angle={90} textAnchor="start" height={150} tick={{ fill: "#000" }} />
+                            <YAxis tick={{ fill: "#000" }}/>
+                            <Tooltip />
+                            <Bar dataKey="count" fill="#8884d8" />
+                            </BarChart>
+                        </ResponsiveContainer>
                     </div>
 
                     <div className="piechart">

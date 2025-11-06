@@ -46,19 +46,23 @@
     color: black;
 }
 
-.barchart-el{
+.barchart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 600px;
     height: 400px;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 600px) {
     .charts-container{
         flex-flow: column;
     }
 
-    .barchart-el{
+    .barchart{
         width: 80vw;
         height: auto;
+        font-size: 10px;
     }
 
     .categories-list span{

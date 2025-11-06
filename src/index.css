@@ -11,3 +11,8 @@ body{
   min-height: 100dvh;
 }
 
+@media (max-width: 650px){
+  *{
+    font-family: 'Times New Roman', Times, serif;
+  }
+}
